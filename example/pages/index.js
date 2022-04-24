@@ -6,19 +6,13 @@ import hookConfig from '../../use-format-amount-input/package.json';
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
-
   const { name: authorName, url: authorUrl } = author;
-
   const { url: repositoryUrl } = repository;
   const repositoryExists = typeof repositoryUrl === 'string';
 
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  const hookSettings = {
-    message: 'Hello, custom hook!'
-  }
-
-  const { message } = useFormatAmountInput(hookSettings);
+  const { amount, handleAmountChange } = useFormatAmountInput();
 
   return (
     <main>
@@ -91,24 +85,24 @@ export default function Index() {
         <h2>Examples</h2>
 
         <h3>Set and grab message</h3>
+
         <p>
           <strong>Input:</strong>
         </p>
         <pre>
           <code>
-{`const hookSettings = {
-  message: 'Hello, custom hook!'
-}
+{`
 
-const { message } = useFormatAmountInput(hookSettings);`}
+const { amount, handleAmountChange } = useFormatAmountInput();`}
           </code>
         </pre>
         <p>
           <strong>Output:</strong>
         </p>
-        <p>
-          { message }
-        </p>
+   
+        <form>
+          <input type="text" name="amount" onChange={handleAmountChange} value={amount} placeholder="Amount" />
+        </form>
       </section>
 
       <footer>
