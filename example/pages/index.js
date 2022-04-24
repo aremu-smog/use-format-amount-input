@@ -12,7 +12,7 @@ export default function Index() {
 
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  const { amount, handleAmountChange } = useFormatAmountInput();
+  const { amount, handleAmountChange } = useFormatAmountInput(3);
 
   return (
     <main>

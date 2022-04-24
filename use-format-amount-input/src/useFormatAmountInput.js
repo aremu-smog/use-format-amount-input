@@ -1,8 +1,7 @@
 import {useState} from "react"
 
-export default function useFormatAmountInput (settings = {}) {
+export default function useFormatAmountInput (decimalPlaces = 0) {
   const [amount, setAmount] = useState("")
-
 
   const handleAmountChange = (e) =>{
     const keyPressed = e.nativeEvent.data
@@ -16,6 +15,10 @@ export default function useFormatAmountInput (settings = {}) {
 
       const leftHandside = amountValueArray[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       const rightHandside = amountValueArray[1]
+
+      if(decimalPlaces && rightHandside?.length > decimalPlaces){
+        return
+      }
 
       let value = leftHandside
 
