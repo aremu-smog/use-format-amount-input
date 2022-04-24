@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+      "login": "aremu_smog",
+      "name": "Aremu Smog",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48217306?v=4",
+      "profile": "https://aremusmog.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
       "login": "colbyfayock",
       "name": "Colby Fayock",
       "avatar_url": "https://avatars2.githubusercontent.com/u/1045274?v=4",
