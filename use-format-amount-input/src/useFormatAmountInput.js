@@ -5,10 +5,14 @@ export default function useFormatAmountInput (decimalPlaces = 0) {
 
   const handleAmountChange = (e) =>{
     const keyPressed = e.nativeEvent.data
+
+    
+    const amountValue = e.target.value.trim()
+
+    const cursorPosition = e.target.selectionStart
 		const keyPattern = /\d/
 
 		if (keyPattern.test(Number(keyPressed)) || (keyPressed.includes(".") && !amount.includes("."))) {
-			const amountValue = e.target.value.trim()
 			const strippedAmount = amountValue.replaceAll(",", "")
 
       const amountValueArray = strippedAmount.split(".")
@@ -30,6 +34,19 @@ export default function useFormatAmountInput (decimalPlaces = 0) {
 		}else{
       return
     }
+
+    setTimeout(()=>{
+      const targetValue = e.target.value
+      const noOfCommas = targetValue.match(/,/g)?.length ?? 0
+      console.log(cursorPosition,targetValue.length, noOfCommas, targetValue)
+      if((cursorPosition + noOfCommas)  === targetValue.length){   
+        e.target.selectionStart = cursorPosition  + noOfCommas
+        e.target.selectionEnd = cursorPosition  + noOfCommas
+      }else{
+        e.target.selectionStart = cursorPosition  
+        e.target.selectionEnd = cursorPosition  
+      }
+    },0)
   }
 
 
