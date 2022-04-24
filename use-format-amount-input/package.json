@@ -1,16 +1,17 @@
 {
   "name": "use-format-amount-input",
   "version": "1.1.0",
-  "description": "A starter for creating a new React hook",
+  "description": "Format price, amount input in react",
   "author": {
     "name": "Aremu Smog",
-    "email": "hello@colbyfayock.com",
-    "url": "https://twitter.com/colbyfayock"
+    "email": "aremuoluwagbamila@gmail.com",
+    "url": "https://twitter.com/aremu_smog"
   },
   "keywords": [
     "react",
     "hooks",
-    "react-hooks"
+    "react-hooks",
+    "format-input"
   ],
   "main": "index.js",
   "scripts": {
@@ -24,10 +25,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/use-format-amount-input"
+    "url": "https://github.com/aremu-smog/use-format-amount-input"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/use-format-amount-input/issues"
+    "url": "https://github.com/aremu-smog/use-format-amount-input/issues"
   },
   "dependencies": {
     "@babel/cli": "^7.14.8",
