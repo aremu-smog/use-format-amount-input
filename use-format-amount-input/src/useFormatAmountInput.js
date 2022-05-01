@@ -9,6 +9,7 @@ export default function useFormatAmountInput (decimalPlaces = 0) {
     
     const amountValue = e.target.value.trim()
 
+    
     const cursorPosition = e.target.selectionStart
 		const keyPattern = /\d/
 
@@ -37,11 +38,15 @@ export default function useFormatAmountInput (decimalPlaces = 0) {
 
     setTimeout(()=>{
       const targetValue = e.target.value
-      const noOfCommas = targetValue.match(/,/g)?.length ?? 0
-      console.log(cursorPosition,targetValue.length, noOfCommas, targetValue)
-      if((cursorPosition + noOfCommas)  === targetValue.length){   
-        e.target.selectionStart = cursorPosition  + noOfCommas
-        e.target.selectionEnd = cursorPosition  + noOfCommas
+      const hasCommas = (/,/g).test(targetValue)
+      const inputType = e.nativeEvent.inputType
+
+      const isDeleting = inputType === "deleteContentBackward" || inputType === "deleteContentForward" || inputType === "deleteContent" || inputType === "deleteByCut"
+
+ 
+      if(hasCommas && ((cursorPosition + 1)  === targetValue.length) && !isDeleting){   
+        e.target.selectionStart = cursorPosition  + 1
+        e.target.selectionEnd = cursorPosition  + 1
       }else{
         e.target.selectionStart = cursorPosition  
         e.target.selectionEnd = cursorPosition  
