@@ -1,9 +1,9 @@
-# 🧰 useCustomHook: React Hook Starter
+# 🧰 useFormatAmountInput
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A starter template for creating a new React Hook.
+A hook to format amount input fields in react
 
 ## 🚀 Getting Started
 
