@@ -5,7 +5,11 @@
 
 A hook to format amount input fields in react
 
-## 🚀 Getting Started
+## 🔍 Repo breakdown
+
+- [Hook Source Code](https://github.com/aremu-smog/use-format-amount-input/tree/main/use-format-amount-input)
+- [Example Source Code](https://github.com/aremu-smog/use-format-amount-input/tree/main/example)
+- [Example](https://use-format-amount-input.vercel.app/)
 
 
 ## Contributors ✨
