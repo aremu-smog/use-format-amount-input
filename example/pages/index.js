@@ -1,8 +1,8 @@
-import { useFormatAmountInput } from '../../use-format-amount-input';
+import { useFormatAmountInput } from 'use-format-amount-input';
 
 import { toCamel } from '../lib/util';
 
-import hookConfig from '../../use-format-amount-input/package.json';
+import hookConfig from 'use-format-amount-input/package.json';
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
