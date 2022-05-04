@@ -5,12 +5,17 @@
 
 A hook to format amount input fields in react
 
-## 🔍 Repo breakdown
+##  Project breakdown 🔍
 
 - [Hook Source Code](https://github.com/aremu-smog/use-format-amount-input/tree/main/use-format-amount-input)
 - [Example Source Code](https://github.com/aremu-smog/use-format-amount-input/tree/main/example)
 - [Example](https://use-format-amount-input.vercel.app/)
+- [Project Board](https://github.com/users/aremu-smog/projects/6)
 
+
+## Buy me a coffee ☕️
+
+- [Click here](https://paystack.com/pay/web-boss-coffee)
 
 ## Contributors ✨
 
@@ -24,6 +29,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://aremusmog.com"><img src="https://avatars.githubusercontent.com/u/48217306?v=4" width="100px;" alt=""/><br /><sub><b>Aremu Smog</b></sub></a><br /><a href="https://github.com/aremu-smog/use-custom-hook/commits?author=aremu-smog" title="Code">💻</a> <a href="https://github.com/aremu-smog/use-custom-hook/commits?author=colbyfayock" title="Documentation">📖</a></td>
   </tr>
 </table>
+
+
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
