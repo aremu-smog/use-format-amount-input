@@ -1,18 +1,11 @@
 import { useFormatAmountInput } from 'use-format-amount-input';
 
-import { toCamel } from '../lib/util';
 
-import hookConfig from 'use-format-amount-input/package.json';
 
 export default function Index() {
-  const { name, description, repository = {}, author = {} } = hookConfig;
-  const { name: authorName, url: authorUrl } = author;
-  const { url: repositoryUrl } = repository;
-  const repositoryExists = typeof repositoryUrl === 'string';
 
-  const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  const { amount, handleAmountChange } = useFormatAmountInput(3);
+  const { amount, handleAmountChange } = useFormatAmountInput();
 
   return (
     <main>
@@ -21,95 +14,68 @@ export default function Index() {
           font-family: sans-serif;
           padding: 0;
           margin: 0;
-        }
-
-        main {
+          background-color: #282c34;
+          min-height: 100vh;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: 1em 0;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .app {
+          background-color: white;
+          width: 100%;
+          width: 350px;
+          padding: 1em;
+          border-radius: 0.5em;
+          color: #282c34;
         }
 
         h1 {
-          font-size: 2em;
+          font-size: 1.8em;
         }
 
-        img {
-          max-width: 100%;
-        }
 
-        pre {
-          overflow: auto;
-          max-height: 15em;
-          background-color: #eeeeee;
-          padding: 1em;
-        }
-
-        section,
-        footer {
+        input {
+          display: block;
           width: 100%;
-          max-width: 50em;
-          margin: 0 auto;
+          padding: 1em;
+          margin: 1em 0;
+          border: 1px solid #282c34;
+          outline: none;
+          border-radius: 0.5em;
+          box-sizing: border-box;
+          transition: border 0.5s;
+        }
+
+        input:hover {
+          border: 1px solid #61dafb;
         }
 
         footer p {
           font-size: .9em;
+          margin-top: 2em;
         }
 
         footer p,
         footer a {
-          color: #546e7a;
+          color: #282c34;
         }
       `}</style>
 
-      <section>
+      <section className="app">
 
-        <h1>{ toCamel(name) }</h1>
+        <h1>Enter amount below</h1>
 
-        <p>{ description }</p>
-
-        { repositoryExists && (
-          <p>
-            <a href={repositoryUrl}>
-              { repositoryUrlDisplay }
-            </a>
-          </p>
-        )}
-
-        <h2>How to use</h2>
-
-        <p>
-          Add your instructions here!
-        </p>
-
-        <h2>Examples</h2>
-
-        <h3>Set and grab message</h3>
-
-        <p>
-          <strong>Input:</strong>
-        </p>
-        <pre>
-          <code>
-{`
-
-const { amount, handleAmountChange } = useFormatAmountInput();`}
-          </code>
-        </pre>
-        <p>
-          <strong>Output:</strong>
-        </p>
-   
         <form>
-          <input type="text" name="amount" onChange={handleAmountChange} value={amount} placeholder="Amount" />
+          <input type="text" name="amount" onChange={handleAmountChange} value={amount} placeholder="Enter amount here" />
         </form>
-      </section>
-
       <footer>
         <p>
-          Made by <a href={authorUrl}>{ authorName }</a>
+          Made by <a href="https://twitter.com/aremu_smog" target="_blank" rel="noreferrer">Aremu Smog</a> | <a href="https://github.com/aremu-smog/use-format-amount-input/tree/main/use-format-amount-input" target="_blank" rel="noreferrer">GitHub Repo</a>
         </p>
       </footer>
+      </section>
+
     </main>
   );
 
