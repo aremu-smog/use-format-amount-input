@@ -8,10 +8,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
-          token: "yes"
-          package : "./use-format-amount-input/package.json"
       - run: npm install
       - run: npm test
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_TOKEN }}
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
+          package : "./use-format-amount-input/package.json"
