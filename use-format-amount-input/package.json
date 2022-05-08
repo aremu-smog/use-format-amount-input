@@ -1,40 +1,40 @@
 {
-  "name": "use-format-amount-input",
-  "version": "0.2.0",
-  "description": "Format price, amount input in react",
-  "author": {
-    "name": "Aremu Smog",
-    "email": "aremuoluwagbamila@gmail.com",
-    "url": "https://twitter.com/aremu_smog"
-  },
-  "keywords": [
-    "react",
-    "hooks",
-    "react-hooks",
-    "format-input"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "build": "babel src --out-dir .",
-    "bump": "npm version",
-    "example": "cd example && yarn install && yarn package",
-    "prepublishOnly": "yarn build",
-    "watch": "nodemon --watch src --exec \"yarn build\""
-  },
-  "license": "MIT",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aremu-smog/use-format-amount-input"
-  },
-  "bugs": {
-    "url": "https://github.com/aremu-smog/use-format-amount-input/issues"
-  },
-  "dependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "nodemon": "^2.0.12"
-  }
+	"name": "use-format-amount-input",
+	"version": "0.2.1",
+	"description": "Format price, amount input in react",
+	"author": {
+		"name": "Aremu Smog",
+		"email": "aremuoluwagbamila@gmail.com",
+		"url": "https://twitter.com/aremu_smog"
+	},
+	"keywords": [
+		"react",
+		"hooks",
+		"react-hooks",
+		"format-input"
+	],
+	"main": "index.js",
+	"scripts": {
+		"build": "babel src --out-dir .",
+		"bump": "npm version",
+		"example": "cd example && yarn install && yarn package",
+		"prepublishOnly": "yarn build",
+		"watch": "nodemon --watch src --exec \"yarn build\""
+	},
+	"license": "MIT",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aremu-smog/use-format-amount-input"
+	},
+	"bugs": {
+		"url": "https://github.com/aremu-smog/use-format-amount-input/issues"
+	},
+	"dependencies": {
+		"@babel/cli": "^7.14.8",
+		"@babel/core": "^7.15.0",
+		"@babel/preset-env": "^7.15.0",
+		"@babel/preset-react": "^7.14.5",
+		"nodemon": "^2.0.12"
+	}
 }
