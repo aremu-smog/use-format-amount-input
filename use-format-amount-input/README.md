@@ -1,5 +1,6 @@
 ## useFormatAmountInput
-Format amount, price, number fields in react 
+
+Format amount, price, number fields in react
 
 ## Installation
 
@@ -13,7 +14,6 @@ or if `npm` is your thing, do:
 npm i use-amount-format-input
 ```
 
-
 ## Usage
 
 ```jsx
@@ -21,14 +21,13 @@ import {useFormatAmountInput} from "use-amount-format-input"
 
 const Component = () => {
 
-    const {amount, handleAmountChange} = useFormatAmountInput()
+    const {amount, handleAmountChange} = useFormatAmountInput({decimalPlaces: 3})
 
     return <form>
     <input type="text" name="amount" value={amount} onChange={handleAmountChange} />
     <form>
 }
 ```
-
 
 ### Params
 
