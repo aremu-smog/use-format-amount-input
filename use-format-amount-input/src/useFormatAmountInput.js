@@ -72,8 +72,11 @@ export default function useFormatAmountInput(props) {
 		}, 0)
 	}
 
+	const strippedAmount = amount.replaceAll(separator, "")
+
 	return {
 		amount,
 		handleAmountChange,
+		strippedAmount,
 	}
 }

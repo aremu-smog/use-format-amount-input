@@ -1,7 +1,7 @@
 import { useFormatAmountInput } from "use-format-amount-input"
 
 export default function Index() {
-	const { amount, handleAmountChange } = useFormatAmountInput({
+	const { amount, strippedAmount, handleAmountChange } = useFormatAmountInput({
 		decimalPlaces: 3,
 	})
 
@@ -71,6 +71,9 @@ export default function Index() {
 						placeholder='Enter amount here'
 					/>
 				</form>
+				<p>
+					<small>Stripped amount: {strippedAmount}</small>
+				</p>
 				<footer>
 					<p>
 						Made by{" "}
