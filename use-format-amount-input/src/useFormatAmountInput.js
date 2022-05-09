@@ -8,6 +8,8 @@ export default function useFormatAmountInput(props) {
 
 	const [amount, setAmount] = useState("")
 
+	const separator = ","
+
 	const handleAmountChange = e => {
 		const keyPressed = e.nativeEvent.data
 
@@ -20,13 +22,13 @@ export default function useFormatAmountInput(props) {
 			keyPattern.test(Number(keyPressed)) ||
 			(keyPressed.includes(".") && !amount.includes("."))
 		) {
-			const strippedAmount = amountValue.replaceAll(",", "")
+			const strippedAmount = amountValue.replaceAll(separator, "")
 
 			const amountValueArray = strippedAmount.split(".")
 
 			const leftHandside = amountValueArray[0].replace(
 				/\B(?=(\d{3})+(?!\d))/g,
-				","
+				separator
 			)
 			const rightHandside = amountValueArray[1]
 
@@ -47,7 +49,7 @@ export default function useFormatAmountInput(props) {
 
 		setTimeout(() => {
 			const targetValue = e.target.value
-			const hasCommas = /,/g.test(targetValue)
+			const hasCommas = targetValue.includes(separator)
 			const inputType = e.nativeEvent.inputType
 
 			const isDeleting =
