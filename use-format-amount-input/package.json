@@ -1,6 +1,6 @@
 {
 	"name": "use-format-amount-input",
-	"version": "0.2.53",
+	"version": "0.2.6",
 	"description": "Format price, amount input in react",
 	"author": {
 		"name": "Aremu Smog",
