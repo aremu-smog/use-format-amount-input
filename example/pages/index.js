@@ -3,6 +3,7 @@ import { useFormatAmountInput } from "use-format-amount-input"
 export default function Index() {
 	const { amount, strippedAmount, handleAmountChange } = useFormatAmountInput({
 		decimalPlaces: 3,
+		separator: ".",
 	})
 
 	return (
