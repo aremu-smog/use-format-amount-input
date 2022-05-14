@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "next build",
+		"build": "yarn add use-format-amount-input && next build",
 		"dev": "next",
 		"develop": "yarn dev",
 		"export": "next export",
