@@ -1,5 +1,7 @@
-on: push
-
+on:
+  push:
+    paths:
+      - "use-format-amount-input/**"
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -12,4 +14,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
-          package : "./use-format-amount-input/package.json"
+          package : "./package.json"
