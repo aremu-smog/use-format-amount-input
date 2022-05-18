@@ -21,7 +21,7 @@ import {useFormatAmountInput} from "use-format-amount-input"
 
 const Component = () => {
 
-    const {amount, handleAmountChange} = useFormatAmountInput({decimalPlaces: 3})
+    const {amount, handleAmountChange, strippedAmount} = useFormatAmountInput({decimalPlaces: 3, separator:","})
 
     return <form>
     <input type="text" name="amount" value={amount} onChange={handleAmountChange} />
