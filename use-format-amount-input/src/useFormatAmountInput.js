@@ -7,6 +7,8 @@ export default function useFormatAmountInput(props) {
 	const [amount, setAmount] = useState("")
 
 	const { separator = "," } = props
+
+	const separatorRegex = new RegExp(separator, "gi")
 	if (separator === ".") {
 		separator = ","
 		console.warn(
@@ -26,7 +28,7 @@ export default function useFormatAmountInput(props) {
 			keyPattern.test(Number(keyPressed)) ||
 			(keyPressed.includes(".") && !amount.includes("."))
 		) {
-			const strippedAmount = amountValue.replaceAll(separator, "")
+			const strippedAmount = amountValue.replace(separatorRegex, "")
 
 			const amountValueArray = strippedAmount.split(".")
 
@@ -76,7 +78,7 @@ export default function useFormatAmountInput(props) {
 		}, 0)
 	}
 
-	const strippedAmount = amount?.replaceAll(separator, "") || ""
+	const strippedAmount = amount.replaceAll(separatorRegex, "") || ""
 
 	return {
 		amount,
