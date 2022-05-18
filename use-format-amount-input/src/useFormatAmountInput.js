@@ -26,7 +26,7 @@ export default function useFormatAmountInput(props) {
 			keyPattern.test(Number(keyPressed)) ||
 			(keyPressed.includes(".") && !amount.includes("."))
 		) {
-			const strippedAmount = amountValue.replaceAll(separator, "")
+			const strippedAmount = amountValue?.replaceAll(separator, "")
 
 			const amountValueArray = strippedAmount.split(".")
 
