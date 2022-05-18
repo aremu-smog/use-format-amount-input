@@ -78,7 +78,7 @@ export default function useFormatAmountInput(props) {
 		}, 0)
 	}
 
-	const strippedAmount = amount.replaceAll(separatorRegex, "") || ""
+	const strippedAmount = amount.replace(separatorRegex, "") || ""
 
 	return {
 		amount,
