@@ -1,11 +1,12 @@
 import { useState } from "react"
 
-export default function useFormatAmountInput({ separator = ",", ...props }) {
+export default function useFormatAmountInput(props) {
 	// This check was made to ensure backwards compatibility with accpeting only the decimal place as a parameter.
 	let decimalPlaces = typeof props === "number" ? props : props?.decimalPlaces
 
 	const [amount, setAmount] = useState("")
 
+	const { separator = "," } = props
 	if (separator === ".") {
 		separator = ","
 		console.warn(
