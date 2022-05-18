@@ -5,19 +5,19 @@ Format amount, price, number fields in react
 ## Installation
 
 ```bash
-yarn add use-amount-format-input
+yarn add use-format-amount-input
 ```
 
 or if `npm` is your thing, do:
 
 ```bash
-npm i use-amount-format-input
+npm i use-format-amount-input
 ```
 
 ## Usage
 
 ```jsx
-import {useFormatAmountInput} from "use-amount-format-input"
+import {useFormatAmountInput} from "use-format-amount-input"
 
 const Component = () => {
 
